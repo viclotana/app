@@ -1,0 +1,47 @@
+
+
+<div class="container">
+    <h3>Developer Registration</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" [(ngModel)]="dev.name" id="fname" name="name" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Twitter Handle</label>
+      </div>
+      <div class="col-75">
+        <input type="text" [(ngModel)]="dev.twitter" id="lname" name="twitter" placeholder="@">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Github Username</label>
+      </div>
+      <div class="col-75">
+        <input type="text" [(ngModel)]="dev.github" id="lname" name="github" placeholder="@">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Stack</label>
+      </div>
+      <div class="col-75">
+        <select id="country" [(ngModel)]="dev.stack" name="stack">
+          <option value="Frontend Developer">Frontend Developer</option>
+          <option value="Backend Developer">Backend Developer</option>
+          <option value="Fullstack Developer">Fullstack Developer</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <br>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>

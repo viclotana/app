@@ -1,0 +1,14 @@
+<div  class="container" *ngIf="events?.length>0; else noEvents">
+  <h2>Events</h2>
+  <ul *ngFor="let event of events">
+    <li><strong>{{event.title}}: </strong>{{event.location}}
+    <p>{{event.info}}</p>
+    <i>Organizers: </i>{{event.organizers}}
+    </li>
+  </ul>
+  
+  </div>
+  <ng-template #noEvents>
+    <hr>
+    <h5>There are no Events to List</h5>
+  </ng-template>
